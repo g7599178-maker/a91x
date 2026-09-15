@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  background: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+video {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+</style>
+</head>
+
+<body>
+
+<div id="start">
+  <button onclick="openGift()">افتح الهدية</button>
+</div>
+
+<video id="scary" playsinline>
+  <source src="VID-20260915-WA0037.mp4" type="video/mp4">
+</video>
+
+<script>
+function openGift() {
+  document.getElementById("start").style.display = "none";
+
+  const video = document.getElementById("scary");
+  video.style.display = "block";
+  video.play();
+}
+</script>
+
+</body>
+</html>
